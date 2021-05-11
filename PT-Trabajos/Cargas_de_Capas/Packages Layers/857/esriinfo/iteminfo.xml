@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ESRI_ItemInformation Culture='es-ES'>
+<name>857</name>
+<guid>7EDB5430-16C7-409A-97DF-9FD17986F55B</guid>
+<catalogpath></catalogpath>
+<snippet>Data correspondiente al camion 857</snippet>
+<description>Data correspondiente al camion 857</description>
+<summary>Data correspondiente al camion 857</summary>
+<title>857</title>
+<tags>857</tags>
+<type>Layer Package</type>
+<typekeywords>
+<typekeyword>Shapefile Feature Class</typekeyword>
+<typekeyword>Layer Package</typekeyword>
+<typekeyword>Data</typekeyword>
+<typekeyword>ArcMap</typekeyword>
+<typekeyword>ArcGlobe</typekeyword>
+<typekeyword>ArcGIS Explorer</typekeyword>
+<typekeyword>lpk</typekeyword>
+</typekeywords>
+<thumbnail>thumbnail/thumbnail.png</thumbnail>
+<documentation></documentation>
+<url></url>
+<datalastmodifiedtime></datalastmodifiedtime>
+<extent>
+<xmin>-70.7642081525501</xmin>
+<ymin>-33.5407625532512</ymin>
+<xmax>-70.6837498051593</xmax>
+<ymax>-33.3920794170466</ymax>
+</extent>
+<spatialreference>WGS_1984_UTM_Zone_19S</spatialreference>
+<accessinformation></accessinformation>
+<licenseinfo></licenseinfo>
+</ESRI_ItemInformation>

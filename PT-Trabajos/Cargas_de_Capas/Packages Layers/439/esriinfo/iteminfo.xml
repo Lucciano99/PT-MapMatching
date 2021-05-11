@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ESRI_ItemInformation Culture='es-ES'>
+<name>439</name>
+<guid>9ED17B08-2425-46B7-9B3F-17D3EECE9A5C</guid>
+<catalogpath></catalogpath>
+<snippet>Data correspondiente al camion 439</snippet>
+<description>Data correspondiente al camion 439</description>
+<summary>Data correspondiente al camion 439</summary>
+<title>439</title>
+<tags>439</tags>
+<type>Layer Package</type>
+<typekeywords>
+<typekeyword>Shapefile Feature Class</typekeyword>
+<typekeyword>Layer Package</typekeyword>
+<typekeyword>Data</typekeyword>
+<typekeyword>ArcMap</typekeyword>
+<typekeyword>ArcGlobe</typekeyword>
+<typekeyword>ArcGIS Explorer</typekeyword>
+<typekeyword>lpk</typekeyword>
+</typekeywords>
+<thumbnail>thumbnail/thumbnail.png</thumbnail>
+<documentation></documentation>
+<url></url>
+<datalastmodifiedtime></datalastmodifiedtime>
+<extent>
+<xmin>-70.772753826546</xmin>
+<ymin>-33.6142167060639</ymin>
+<xmax>-70.6164856133245</xmax>
+<ymax>-33.3641510487708</ymax>
+</extent>
+<spatialreference>WGS_1984_UTM_Zone_19S</spatialreference>
+<accessinformation></accessinformation>
+<licenseinfo></licenseinfo>
+</ESRI_ItemInformation>
