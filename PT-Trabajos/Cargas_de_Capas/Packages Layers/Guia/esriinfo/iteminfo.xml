@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ESRI_ItemInformation Culture='es-ES'>
+<name>Guia</name>
+<guid>7BC59DD7-5D4E-40A9-BA86-0769AC5EE91F</guid>
+<catalogpath></catalogpath>
+<snippet>De distritos por los que pasan los camiones de recoleccion.</snippet>
+<description>Capa de poligono que representa la parte en que se divide el territorio comunal para las operaciones de terreno, en el levantamiento del Censo de Población y Vivienda. Los distritos censales pueden ser urbanos, rurales o mixtos. Además, cada distrito censal posee un nombre propio el cual es característico del territorio que representa. Sus límites se mantienen a lo largo de los Censos para efectos de comparación intercensal. Son en parte herencia de la división político/administrativa anterior a la regionalización.</description>
+<summary>De distritos por los que pasan los camiones de recoleccion.</summary>
+<title>Guia</title>
+<tags>Guia</tags>
+<type>Layer Package</type>
+<typekeywords>
+<typekeyword>Shapefile Feature Class</typekeyword>
+<typekeyword>Layer Package</typekeyword>
+<typekeyword>Data</typekeyword>
+<typekeyword>ArcMap</typekeyword>
+<typekeyword>ArcGlobe</typekeyword>
+<typekeyword>ArcGIS Explorer</typekeyword>
+<typekeyword>lpk</typekeyword>
+</typekeywords>
+<thumbnail>thumbnail/thumbnail.png</thumbnail>
+<documentation></documentation>
+<url></url>
+<datalastmodifiedtime></datalastmodifiedtime>
+<extent>
+<xmin>-70.85972895</xmin>
+<ymin>-33.6536976159999</ymin>
+<xmax>-70.585289729</xmax>
+<ymax>-33.31791805</ymax>
+</extent>
+<spatialreference>GCS_SIRGAS_2000</spatialreference>
+<accessinformation>Sección de Cartografía y Sección de Análisis del Departamento de Geografía del Instituto Nacional de Estadísticas</accessinformation>
+<licenseinfo></licenseinfo>
+</ESRI_ItemInformation>
