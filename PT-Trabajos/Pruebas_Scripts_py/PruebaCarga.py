@@ -19,7 +19,7 @@ for alg in QgsApplication.processingRegistry().algorithms():
     print(alg.id(), "->", alg.displayName())
 
 
-dir_Archivo_Vectores = #"/home/lucciano/PT-Trabajos/CapaPrueba" Hay que cambiarlo
+dir_Archivo_Vectores = '/home/lucciano/git_Proyecto/CapaPrueba/Capa_T434_34.shp' #Hay que cambiarlo
 vlayer = QgsVectorLayer(dir_Archivo_Vectores, "Capa_Prueba1", "ogr")
 
 if not vlayer.isValid():
@@ -55,11 +55,10 @@ for feat in features:
     geo= feat.geometry() #Para acceder a las coordenadas del verctor
     #print(geo.asPoint()) #Muestra la coordenadas del objeto geo
     #print(geo.asPoint().x()) #Muestra la coordenada del elemento X como ejemplo
-    dic_vect={'ObjectID':feat['OBJECTID'], 'X':geo.asPoint().x(), 'Y': geo.asPoint().y()
+    dic_vect[feat['OBJECTID']]={'X':geo.asPoint().x(), 'Y': geo.asPoint().y()
     , 'Distancia':feat['DISTANCIA'], 'Velocidad':feat['VELOCIDAD'], 'NeaFID': feat['Near_FID']}
-    
-    recorre_dic(dic_vect)
 
+    print(dic_vect)
 
 
 
