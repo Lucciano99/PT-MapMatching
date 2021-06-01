@@ -11,6 +11,9 @@ from qgis.core import (
 #from qgis.utils import iface
 
 from qgis.core import QgsApplication
+#from qgis.utils import QgsGeometryAnalyzer
+from qgis.utils import iface #Por siacaso en caso de 
+
 
 qgs = QgsApplication([], False) #Se especifica que no se trabajara con la GUI
 QgsApplication.setPrefixPath(".local/share/QGIS/QGIS3", True)
@@ -20,31 +23,21 @@ for alg in QgsApplication.processingRegistry().algorithms():
 
 
 dir_Archivo_Vectores = '/home/lucciano/git_Proyecto/CapaPrueba/Capa_T434_34.shp' #Hay que cambiarlo
+dir_Archivo_Vectores_temporal='/home/lucciano/git_Proyecto/CapaPrueba/Capa_Temporal_2'
 vlayer = QgsVectorLayer(dir_Archivo_Vectores, "Capa_Prueba1", "ogr")
+
 
 if not vlayer.isValid():
     print("Layer failed to load!")
 else:
-    QgsProject.instance().addMapLayer(vlayer)
+    QgsProject.instance().addMapLayer(vlayer,False)
 
-#for field in vlayer.fields():  #Muestra toda la informacion del objeto vlayer
-#   print(field.name(), field.typeName())
-
-dic_vect={} #Diccionario de vectores
+#Obtiene el arbol de capas del grupoo de nivel en el proyecto
+layerTree= iface.layerTreeCanvasBridge().rootGroup()
+layerTree.insertChildNode(-1, QgsLayerTreeLayer(vlayer))
 
 
 features= vlayer.getFeatures()
-
-
-
-############################################################################
-# Muestra contenido de diccionario (atributos de todos los puntos gps) #####
-############################################################################
-
-def recorre_dic(dic_vect):
-	for i in dic_vect:
-		print(i, ":", dic_vect[i])
-
 
 for feat in features:
     
@@ -55,8 +48,9 @@ for feat in features:
     geo= feat.geometry() #Para acceder a las coordenadas del verctor
     #print(geo.asPoint()) #Muestra la coordenadas del objeto geo
     #print(geo.asPoint().x()) #Muestra la coordenada del elemento X como ejemplo
+    dic_vect={}
     dic_vect[feat['OBJECTID']]={'X':geo.asPoint().x(), 'Y': geo.asPoint().y()
-    , 'Distancia':feat['DISTANCIA'], 'Velocidad':feat['VELOCIDAD'], 'NeaFID': feat['Near_FID']}
+    , 'Velocidad':feat['VELOCIDAD']}
 
     print(dic_vect)
 
