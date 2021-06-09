@@ -1,4 +1,6 @@
 import os
+#import qgis
+#import sys
 
 from qgis.core import (
  QgsVectorLayer,
@@ -9,14 +11,17 @@ from qgis.core import (
 from qgis.core import QgsApplication
 from qgis.utils import iface #Por siacaso en caso de 
 #from qgis.analysis import QgsGeometryAnalyzer PARA LAS VERSIONES 3.X NO SIRVE
-from qgis import processing 
+#from qgis import processing 
+#from qgis import utils
 
+#sys.path.append(r)
 
 ################
 ###Parametros###
 ################
 
 #Buffer
+
 #searchRadius_list= []
 #Rango de tolerancia de velocidad
 #tolerancia_V= [15,20,35,45,55]
@@ -68,45 +73,46 @@ features= vlayer.getFeatures()
 rw = roadway.getFeatures()
 
 
+
+
 def gpsDataCapa(features):
+    dic_gps={}
     for aux_dic in features:
         geo_coordenada = aux_dic.geometry()
         atributos= aux_dic.attributes()
-        
-    
         #atri_list=[]
 
         #for aux_list in atributos:
             #atri_list=[aux_list]
             #print(atri_list)            
 
-       
         #for aux_list in atri_list:
 
             #aux_list=atri_list[atributos]
-
         #print(atributos)
         #print(atributos[0][1])
-        
-        dic_gps={}
-
         key_list= ['X', 'Y', 'Velocidad']  #Por mientras almacenar NeaFID pero sin ocupar 
         value_list = [geo_coordenada.asPoint().x(), geo_coordenada.asPoint().y(), atributos[14]] #0, X, Y , 14, 18
-        
         dic_gps[atributos[0]]=dict(zip(key_list, value_list))
-        
         #diccionario_gps = dic_gps.keys() Me muestra las llaves del diccionario dic_gps
-
-        print (dic_gps)
+    return dic_gps
 
         
 
         #return dic_gps
 
-#gpsDataCapa(features)
+buffer_distance=1
 
-dic_resultadoBuff={}
+print(gpsDataCapa(features))
+aux= features.geometry()
+bf_geom=gpsDataCapa().buffer(buffer_distance, -1)
+firstpoint= aux.interpolate(0)
+print(bf_geom)
 
+
+#dic_resultadoBuff={}
+
+'''
 dic_resultadoBuff= processing.run("native:buffer", {'INPUT': 'Capa_Prueba1',
     'DISTANCE': 100.0,
     'SEGMENTS': 5,
@@ -116,6 +122,7 @@ dic_resultadoBuff= processing.run("native:buffer", {'INPUT': 'Capa_Prueba1',
     'MITER_LIMIT': 10,
     'OUTPUT': 'Capa_temporal'
     })
+'''
 
 
 

@@ -15,6 +15,7 @@ from qgis.core import QgsApplication
 from qgis.utils import iface #Por siacaso en caso de 
 
 
+
 qgs = QgsApplication([], False) #Se especifica que no se trabajara con la GUI
 QgsApplication.setPrefixPath(".local/share/QGIS/QGIS3", True)
 QgsApplication.initQgis()
@@ -32,30 +33,39 @@ if not vlayer.isValid():
 else:
     QgsProject.instance().addMapLayer(vlayer,False)
 
-#Obtiene el arbol de capas del grupoo de nivel en el proyecto
-layerTree= iface.layerTreeCanvasBridge().rootGroup()
-layerTree.insertChildNode(-1, QgsLayerTreeLayer(vlayer))
+buffer_distance=1
 
 
-features= vlayer.getFeatures()
+
+features= vlayer.getFeatures(0)
+
+
 
 for feat in features:
-    
+    #count=0
     #print("OBJECTID: ", feat['OBJECTID']) Modo de ejemplo muestra todo los OBJECTID de la capa
     #print(feat) Muestra los atributos del objeto
     #attr= feat.attributes() #Muestra todos los atributos en una lista
     #print(attr)
-    geo= feat.geometry() #Para acceder a las coordenadas del verctor
+    #geo= feat.geometry() #Para acceder a las coordenadas del vector
     #print(geo.asPoint()) #Muestra la coordenadas del objeto geo
     #print(geo.asPoint().x()) #Muestra la coordenada del elemento X como ejemplo
-    dic_vect={}
-    dic_vect[feat['OBJECTID']]={'X':geo.asPoint().x(), 'Y': geo.asPoint().y()
-    , 'Velocidad':feat['VELOCIDAD']}
+    
+    #bf_geom=geo.buffer(buffer_distance, -1)
+    #firstpoint= geo.interpolate(0)
+    #print(bf_geom)
 
-    print(dic_vect)
+    #dic_vect={}
+    #dic_vect[feat['OBJECTID']]={'X':geo.asPoint().x(), 'Y': geo.asPoint().y()
+    #, 'Velocidad':feat['VELOCIDAD']}
 
+    #print(dic_vect)
 
+#aux= features.geometry()
 
+bf_geom=aux.buffer(buffer_distance, -1)
+firstpoint= aux.interpolate(0)
+print(bf_geom)
 
 
 
