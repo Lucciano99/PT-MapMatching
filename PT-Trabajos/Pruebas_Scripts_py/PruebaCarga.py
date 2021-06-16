@@ -33,11 +33,11 @@ if not vlayer.isValid():
 else:
     QgsProject.instance().addMapLayer(vlayer,False)
 
-buffer_distance=1
+#buffer_distance=1
 
 
 
-features= vlayer.getFeatures(0)
+features= vlayer.getFeatures()
 
 
 
@@ -47,25 +47,26 @@ for feat in features:
     #print(feat) Muestra los atributos del objeto
     #attr= feat.attributes() #Muestra todos los atributos en una lista
     #print(attr)
-    #geo= feat.geometry() #Para acceder a las coordenadas del vector
+    geo= feat.geometry() #Para acceder a las coordenadas del vector
+
     #print(geo.asPoint()) #Muestra la coordenadas del objeto geo
     #print(geo.asPoint().x()) #Muestra la coordenada del elemento X como ejemplo
-    
-    #bf_geom=geo.buffer(buffer_distance, -1)
-    #firstpoint= geo.interpolate(0)
-    #print(bf_geom)
+    #print(geo.asPoint().y()) #Muestra la coordenada del elemento Y como ejemplo
 
-    #dic_vect={}
-    #dic_vect[feat['OBJECTID']]={'X':geo.asPoint().x(), 'Y': geo.asPoint().y()
-    #, 'Velocidad':feat['VELOCIDAD']}
+    buffer_distance=100
+    bf_geom=geo.buffer(buffer_distance, -1)
+    firstpoint= geo.interpolate(0)
+    print(bf_geom)
+
+    dic_vect={}
+    dic_vect[feat['OBJECTID']]={'X':geo.asPoint().x(), 'Y': geo.asPoint().y()
+    , 'Velocidad':feat['VELOCIDAD']}
 
     #print(dic_vect)
 
-#aux= features.geometry()
 
-bf_geom=aux.buffer(buffer_distance, -1)
-firstpoint= aux.interpolate(0)
-print(bf_geom)
+
+
 
 
 

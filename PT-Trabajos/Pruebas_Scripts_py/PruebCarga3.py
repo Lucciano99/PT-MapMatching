@@ -8,6 +8,8 @@ from qgis.core import (
  QgsApplication,
 )
 
+
+
 from qgis.core import QgsApplication
 from qgis.utils import iface #Por siacaso en caso de 
 #from qgis.analysis import QgsGeometryAnalyzer PARA LAS VERSIONES 3.X NO SIRVE
@@ -45,12 +47,12 @@ for alg in QgsApplication.processingRegistry().algorithms():
 
 
 dir_Archivo_Vectores = '/home/lucciano/git_Proyecto/CapaPrueba/Capa_T434_34.shp' #Hay que cambiarlo # Carga de capas GPS a probar
-Cap_temporal= '/home/lucciano/git_Proyecto/CapaPrueba/Capa_temporal.shp' #Capa temporal para utilizar los buffer
+Cap_temporal= '/home/lucciano/git_Proyecto/CapaPrueba/Prueba_Punto_Buffer.shp' #Capa temporal prueba de buffer punto creados
 dir_redVial= '/home/lucciano/git_Proyecto/Cargas_de_Capas/Redvial/RedVialComunasSantiago.shp' # Carga redVial
 
 vlayer = QgsVectorLayer(dir_Archivo_Vectores, "Capa_Prueba1", "ogr")
 roadway = QgsVectorLayer(dir_redVial, "RedVial", "ogr")
-temporal= QgsVectorLayer(Cap_temporal, "Capa_temporal", "org")
+temporal= QgsVectorLayer(Cap_temporal, "Prueba_Punto", "org")
 
 
 if vlayer.isValid() == False and roadway.isValid() == False:       #not vlayer.isValid() || 
@@ -62,15 +64,9 @@ else:
 
 
 
-#Se crea la capa vacia, ahora ver como ingresar los puntos
-
-#Prepara la capa temporal para editar
-#temporal.startEditing()
-vlayer.startEditing()
-
-
 features= vlayer.getFeatures() 
-rw = roadway.getFeatures()
+#rw = roadway.getFeatures()
+features_temporal=temporal.getFeatures()
 
 
 
@@ -86,31 +82,31 @@ def gpsDataCapa(features):
             #atri_list=[aux_list]
             #print(atri_list)            
 
-        #for aux_list in atri_list:
 
-            #aux_list=atri_list[atributos]
-        #print(atributos)
-        #print(atributos[0][1])
         key_list= ['X', 'Y', 'Velocidad']  #Por mientras almacenar NeaFID pero sin ocupar 
         value_list = [geo_coordenada.asPoint().x(), geo_coordenada.asPoint().y(), atributos[14]] #0, X, Y , 14, 18
         dic_gps[atributos[0]]=dict(zip(key_list, value_list))
         #diccionario_gps = dic_gps.keys() Me muestra las llaves del diccionario dic_gps
-    return dic_gps
 
-        
+    return dic_gps[408]
 
-        #return dic_gps
 
-buffer_distance=1
 
-print(gpsDataCapa(features))
-aux= features.geometry()
-bf_geom=gpsDataCapa().buffer(buffer_distance, -1)
-firstpoint= aux.interpolate(0)
+
+#print(gpsDataCapa(features))
+
+'''
+buffer_distance=100
+
+bf_geom=gpsDataCapa(features).buffer(buffer_distance, -1)
+firstpoint= gpsDataCapa(features).interpolate(0)
 print(bf_geom)
+'''
+#-------------------------------------------# Ejemplo a seguir 
+#bf_geom=aux.buffer(buffer_distance, -1)
+#firstpoint= aux.interpolate(0)
+#print(bf_geom)
 
-
-#dic_resultadoBuff={}
 
 '''
 dic_resultadoBuff= processing.run("native:buffer", {'INPUT': 'Capa_Prueba1',

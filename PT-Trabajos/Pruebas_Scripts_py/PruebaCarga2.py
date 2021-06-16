@@ -27,18 +27,3 @@ else:
 
 vlayer= QgsProject.instance().mapLayers()
 
-#print(vlayer)
-
-
-lista = [vlayer.name() for vlayer in QgsProject.instance().mapLayers().values()]
-
-dic_list = {}
-
-for lista in QgsProject.instance().mapLayers().values():
-    dic_list[lista.name()]= lista
-
-print(dic_list)
-
-Capa_Prueba1_layer=QgsProject.instance().mapLayersByName("Capa_Prueba1")[0]
-
-print(Capa_Prueba1_layer)
