@@ -11,33 +11,12 @@ from qgis.core import (
 
 
 from qgis.core import QgsApplication
-from qgis.utils import iface #Por siacaso en caso de 
+from qgis.utils import iface #Por siacaso 
 #from qgis.analysis import QgsGeometryAnalyzer PARA LAS VERSIONES 3.X NO SIRVE
 #from qgis import processing 
 #from qgis import utils
 
-#sys.path.append(r)
 
-################
-###Parametros###
-################
-
-#Buffer
-
-#searchRadius_list= []
-#Rango de tolerancia de velocidad
-#tolerancia_V= [15,20,35,45,55]
-#frecuencia de muestreo(Lo que emite en cada intervalo de tiempo?)
-#samp_freq_List = [10]
-
-################
-###Diccionarios#
-################
-
-#Diccionario de resultados
-d_res={}
-#Diccionario con cantidad de puntos gps
-d_gps={}
 
 qgs = QgsApplication([], False) #Se especifica que no se trabajara con la GUI
 QgsApplication.setPrefixPath(".local/share/QGIS/QGIS3", True)
@@ -75,14 +54,9 @@ def gpsDataCapa(features):
     dic_gps={}
     for aux_dic in features:
         geo_coordenada = aux_dic.geometry()
-        atributos= aux_dic.attributes()
-        #atri_list=[]
+        atributos= aux_dic.attributes()       
 
-        #for aux_list in atributos:
-            #atri_list=[aux_list]
-            #print(atri_list)            
-
-
+        
         key_list= ['X', 'Y', 'Velocidad']  #Por mientras almacenar NeaFID pero sin ocupar 
         value_list = [geo_coordenada.asPoint().x(), geo_coordenada.asPoint().y(), atributos[14]] #0, X, Y , 14, 18
         dic_gps[atributos[0]]=dict(zip(key_list, value_list))
@@ -91,17 +65,30 @@ def gpsDataCapa(features):
     return dic_gps[408]
 
 
+coord=gpsDataCapa(features)
+
+print(coord)
 
 
-#print(gpsDataCapa(features))
+'''
+for i in coord:
+    llave_X= coord['X']
+    llave_Y= coord['Y']
 
+print(llave_X, llave_Y)
+'''
+'''
+for i in coord:
+    llave_XY=coord['X']['Y']
+print(llave_XY)
+'''
 '''
 buffer_distance=100
-
-bf_geom=gpsDataCapa(features).buffer(buffer_distance, -1)
-firstpoint= gpsDataCapa(features).interpolate(0)
-print(bf_geom)
+bf_geo=hola.buffer(buffer_distance, -1)
+firstpoint= hola.interpolate(0)
+print(bf_geo)
 '''
+
 #-------------------------------------------# Ejemplo a seguir 
 #bf_geom=aux.buffer(buffer_distance, -1)
 #firstpoint= aux.interpolate(0)
