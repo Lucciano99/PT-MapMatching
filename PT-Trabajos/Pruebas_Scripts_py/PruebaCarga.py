@@ -48,13 +48,14 @@ for aux_feat in features_temp:
     geo_temp=aux_feat.geometry()
     print(geo_temp)
 
+    '''
     buffer_distance=100
     bf_geoTemp= geo_temp.buffer(buffer_distance, -1)
     firstpoint= geo_temp.interpolat(0)
     print(bf_geoTemp)  
+    '''
 
-
-
+'''
 for feat in features:
     
     #print("OBJECTID: ", feat['OBJECTID']) Modo de ejemplo muestra todo los OBJECTID de la capa
@@ -66,10 +67,11 @@ for feat in features:
     #print(geo.asPoint().x()) #Muestra la coordenada del elemento X como ejemplo
     #print(geo.asPoint().y()) #Muestra la coordenada del elemento Y como ejemplo
 
-    buffer_distance=100
-    bf_geom=geo.buffer(buffer_distance, -1)
-    firstpoint= geo.interpolate(0)
-    #print(bf_geom)
+    buffer_distance=10
+    bf_geoTemp= geo.buffer(buffer_distance, -1)
+    #firstpoint= geo.interpolat(0)
+    print(bf_geoTemp)  
+
 
     dic_vect={}
     dic_vect[feat['OBJECTID']]={'X':geo.asPoint().x(), 'Y': geo.asPoint().y()
@@ -81,7 +83,7 @@ for feat in features:
 
 
 
-
+'''
 
 '''
 for i in coor:

@@ -59,15 +59,19 @@ def gpsDataCapa(features):
         
         key_list= ['X', 'Y', 'Velocidad']  #Por mientras almacenar NeaFID pero sin ocupar 
         value_list = [geo_coordenada.asPoint().x(), geo_coordenada.asPoint().y(), atributos[14]] #0, X, Y , 14, 18
+
         dic_gps[atributos[0]]=dict(zip(key_list, value_list))
         #diccionario_gps = dic_gps.keys() Me muestra las llaves del diccionario dic_gps
 
-    return dic_gps[408]
+    return dic_gps
 
 
 coord=gpsDataCapa(features)
 
-print(coord)
+#Prueba de segmento a utilizar
+print(coord[280])
+print(coord[408])
+
 
 
 '''
@@ -77,6 +81,7 @@ for i in coord:
 
 print(llave_X, llave_Y)
 '''
+
 '''
 for i in coord:
     llave_XY=coord['X']['Y']
@@ -84,8 +89,8 @@ print(llave_XY)
 '''
 '''
 buffer_distance=100
-bf_geo=hola.buffer(buffer_distance, -1)
-firstpoint= hola.interpolate(0)
+bf_geo=llave_X.buffer(buffer_distance, -1)
+firstpoint= llave_X.interpolate(0)
 print(bf_geo)
 '''
 

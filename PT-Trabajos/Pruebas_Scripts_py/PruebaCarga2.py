@@ -52,10 +52,13 @@ def gpsDataCapa(features):
         atributos= aux_dic.attributes()       
 
         
-        key_list= ['X', 'Y', 'Velocidad']  #Por mientras almacenar NeaFID pero sin ocupar 
-        value_list = [geo_coordenada.asPoint().x(), geo_coordenada.asPoint().y(), atributos[14]] #0, X, Y , 14, 18
+        key_list= ['X', 'Y']  #Por mientras almacenar NeaFID pero sin ocupar 
+        value_list = [geo_coordenada.asPoint().x(), geo_coordenada.asPoint().y()] #0, X, Y , 14, 18
         dic_gps[atributos[0]]=dict(zip(key_list, value_list))
         #diccionario_gps = dic_gps.keys() Me muestra las llaves del diccionario dic_gps
+        #bf_geom=aux.buffer(buffer_distance, -1)
+        #firstpoint= aux.interpolate(0)
+        #print(bf_geom)
 
     return dic_gps
 
