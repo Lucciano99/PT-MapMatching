@@ -1,0 +1,67 @@
+Versión de QGIS: 3.16.8-Hannover
+Revisión del código de QGIS: 8c50902ea4
+Versión de Qt: 5.12.8
+Versión de GDAL: 3.0.4
+Versión de GEOS: 3.9.0-CAPI-1.16.2
+Versión de PROJ: Rel. 6.3.1, February 10th, 2020
+SAGA version 7.3.0 is not officially supported - algorithms may encounter issues
+Procesando algoritmo...
+Algoritmo 'Snap points to lines' comenzando…
+Parámetros de entrada:
+{ 'DISTANCE' : 100, 'INPUT' : '/home/lucciano/git_Proyecto/CapaPrueba/Capa_T434_34_X_Y.shp', 'MOVES' : '/home/lucciano/git_Proyecto/CapaPrueba/Capa_Snap/Snap_line.shp', 'OUTPUT' : '/home/lucciano/git_Proyecto/CapaPrueba/Capa_Snap/Resultado_snap_punto.shp', 'SNAP' : '/home/lucciano/git_Proyecto/Cargas_de_Capas/Redvial/RedVialComunasSantiago.shp' }
+
+shapes_points "Snap Points to Lines" -INPUT "/home/lucciano/git_Proyecto/CapaPrueba/Capa_T434_34_X_Y.shp" -SNAP "/home/lucciano/git_Proyecto/Cargas_de_Capas/Redvial/RedVialComunasSantiago.shp" -DISTANCE 100.0 -OUTPUT "/home/lucciano/git_Proyecto/CapaPrueba/Capa_Snap/Resultado_snap_punto.shp" -MOVES "/home/lucciano/git_Proyecto/CapaPrueba/Capa_Snap/Snap_line.shp"
+____________________________
+
+##### ## ##### ##
+### ### ## ###
+### # ## ## #### # ##
+### ##### ## # #####
+##### # ## ##### # ##
+____________________________
+
+SAGA Version: 7.3.0
+
+____________________________
+library path: /usr/lib/x86_64-linux-gnu/saga/
+library name: libshapes_points
+library : shapes_points
+tool : Snap Points to Lines
+identifier : 19
+author : O.Conrad (c) 2012
+processors : 1 [1]
+____________________________
+
+Load shapes: /home/lucciano/git_Proyecto/CapaPrueba/Capa_T434_34_X_Y.shp...
+
+
+Load shapes: /home/lucciano/git_Proyecto/Cargas_de_Capas/Redvial/RedVialComunasSantiago.shp...
+
+
+
+
+Parameters
+
+
+Points: Capa_T434_34_X_Y
+Snap Features: RedVialComunasSantiago
+Result:
+Moves:
+Search Distance: 100.000000
+
+
+
+
+
+Save shapes: /home/lucciano/git_Proyecto/CapaPrueba/Capa_Snap/Snap_line.shp...
+
+
+free(): invalid pointer
+Aborted (core dumped)
+Ejecución completada en 30.67 segundos
+Resultados:
+{'MOVES': '/home/lucciano/git_Proyecto/CapaPrueba/Capa_Snap/Snap_line.shp',
+'OUTPUT': '/home/lucciano/git_Proyecto/CapaPrueba/Capa_Snap/Resultado_snap_punto.shp'}
+
+Cargando las capas resultantes
+Algoritmo 'Snap points to lines' finalizado
