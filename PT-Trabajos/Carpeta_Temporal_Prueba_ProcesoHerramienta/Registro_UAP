@@ -1,0 +1,18 @@
+Versión de QGIS: 3.16.8-Hannover
+Revisión del código de QGIS: 8c50902ea4
+Versión de Qt: 5.12.8
+Versión de GDAL: 3.0.4
+Versión de GEOS: 3.9.0-CAPI-1.16.2
+Versión de PROJ: Rel. 6.3.1, February 10th, 2020
+Procesando algoritmo...
+Algoritmo 'Agregar atributos de geometría' comenzando…
+Parámetros de entrada:
+{ 'CALC_METHOD' : 0, 'INPUT' : '/home/lucciano/Trabajo PT/Carpeta_Temporal_Prueba_ProcesoHerramienta/CapaPuntoResultado.shp|layername=CapaPuntoResultado', 'OUTPUT' : '/home/lucciano/Trabajo PT/Carpeta_Temporal_Prueba_ProcesoHerramienta/Capa_Snap_Point.shp' }
+
+Ejecución completada en 0.92 segundos
+Resultados:
+{'OUTPUT': '/home/lucciano/Trabajo '
+'PT/Carpeta_Temporal_Prueba_ProcesoHerramienta/Capa_Snap_Point.shp'}
+
+Cargando las capas resultantes
+Algoritmo 'Agregar atributos de geometría' finalizado
