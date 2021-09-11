@@ -1,0 +1,68 @@
+Versión de QGIS: 3.16.8-Hannover
+Revisión del código de QGIS: 8c50902ea4
+Versión de Qt: 5.12.8
+Versión de GDAL: 3.0.4
+Versión de GEOS: 3.9.0-CAPI-1.16.2
+Versión de PROJ: Rel. 6.3.1, February 10th, 2020
+SAGA version 7.3.0 is not officially supported - algorithms may encounter issues
+Procesando algoritmo...
+Algoritmo 'Snap points to lines' comenzando…
+Parámetros de entrada:
+{ 'DISTANCE' : 100, 'INPUT' : '/home/lucciano/Trabajo PT/CapaPrueba/Capa_T434_34.shp', 'MOVES' : '/home/lucciano/Trabajo PT/Carpeta_Temporal_Prueba_ProcesoHerramienta/Snap_line.shp', 'OUTPUT' : 'TEMPORARY_OUTPUT', 'SNAP' : '/home/lucciano/Trabajo PT/Cargas_de_Capas/Redvial/RedVialComunasSantiago.shp' }
+
+shapes_points "Snap Points to Lines" -INPUT "/home/lucciano/Trabajo PT/CapaPrueba/Capa_T434_34.shp" -SNAP "/home/lucciano/Trabajo PT/Cargas_de_Capas/Redvial/RedVialComunasSantiago.shp" -DISTANCE 100.0 -OUTPUT "/tmp/processing_NEfxnD/e06479c3d98f46c3a0d45d81fae468df/OUTPUT.shp" -MOVES "/home/lucciano/Trabajo PT/Carpeta_Temporal_Prueba_ProcesoHerramienta/Snap_line.shp"
+____________________________
+
+##### ## ##### ##
+### ### ## ###
+### # ## ## #### # ##
+### ##### ## # #####
+##### # ## ##### # ##
+____________________________
+
+SAGA Version: 7.3.0
+
+____________________________
+library path: /usr/lib/x86_64-linux-gnu/saga/
+library name: libshapes_points
+library : shapes_points
+tool : Snap Points to Lines
+identifier : 19
+author : O.Conrad (c) 2012
+processors : 1 [1]
+____________________________
+
+Load shapes: /home/lucciano/Trabajo PT/CapaPrueba/Capa_T434_34.shp...
+
+
+Load shapes: /home/lucciano/Trabajo PT/Cargas_de_Capas/Redvial/RedVialComunasSantiago.shp...
+
+
+
+
+Parameters
+
+
+Points: Capa_T434_34
+Snap Features: RedVialComunasSantiago
+Result:
+Moves:
+Search Distance: 100.000000
+
+
+
+
+
+Save shapes: /home/lucciano/Trabajo PT/Carpeta_Temporal_Prueba_ProcesoHerramienta/Snap_line.shp...
+
+
+free(): invalid pointer
+Aborted (core dumped)
+Ejecución completada en 35.77 segundos
+Resultados:
+{'MOVES': '/home/lucciano/Trabajo '
+'PT/Carpeta_Temporal_Prueba_ProcesoHerramienta/Snap_line.shp',
+'OUTPUT': '/tmp/processing_NEfxnD/e06479c3d98f46c3a0d45d81fae468df/OUTPUT.shp'}
+
+Cargando las capas resultantes
+Algoritmo 'Snap points to lines' finalizado

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ESRI_ItemInformation Culture='es-ES'>
+<name>436</name>
+<guid>2C799681-F572-4393-AD72-2E3B006F5B5F</guid>
+<catalogpath></catalogpath>
+<snippet>Data correspondiente al camion 436.</snippet>
+<description>Data correspondiente al camion 436.</description>
+<summary>Data correspondiente al camion 436.</summary>
+<title>436</title>
+<tags>436</tags>
+<type>Layer Package</type>
+<typekeywords>
+<typekeyword>Shapefile Feature Class</typekeyword>
+<typekeyword>Layer Package</typekeyword>
+<typekeyword>Data</typekeyword>
+<typekeyword>ArcMap</typekeyword>
+<typekeyword>ArcGlobe</typekeyword>
+<typekeyword>ArcGIS Explorer</typekeyword>
+<typekeyword>lpk</typekeyword>
+</typekeywords>
+<thumbnail>thumbnail/thumbnail.png</thumbnail>
+<documentation></documentation>
+<url></url>
+<datalastmodifiedtime></datalastmodifiedtime>
+<extent>
+<xmin>-70.7840141672333</xmin>
+<ymin>-33.4897277624878</ymin>
+<xmax>-70.6525706832582</xmax>
+<ymax>-33.3646579247947</ymax>
+</extent>
+<spatialreference>WGS_1984_UTM_Zone_19S</spatialreference>
+<accessinformation></accessinformation>
+<licenseinfo></licenseinfo>
+</ESRI_ItemInformation>

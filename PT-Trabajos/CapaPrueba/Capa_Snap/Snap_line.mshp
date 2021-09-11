@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SAGA_METADATA>
+  <DATABASE>
+    <FIELDS>
+      <FIELD TYPE="LONGINT">OBJECTID</FIELD>
+      <FIELD TYPE="DOUBLE">Contador</FIELD>
+      <FIELD TYPE="DATE">Fecha</FIELD>
+      <FIELD TYPE="STRING">Hora</FIELD>
+      <FIELD TYPE="STRING">FIELD_5</FIELD>
+      <FIELD TYPE="DOUBLE">Latitud</FIELD>
+      <FIELD TYPE="DOUBLE">Longitud</FIELD>
+      <FIELD TYPE="STRING">Recorrido</FIELD>
+      <FIELD TYPE="STRING">FIELD_9</FIELD>
+      <FIELD TYPE="STRING">Comuna</FIELD>
+      <FIELD TYPE="STRING">FIELD_11</FIELD>
+      <FIELD TYPE="STRING">Distancia</FIELD>
+      <FIELD TYPE="STRING">Tipo</FIELD>
+      <FIELD TYPE="STRING">Descripci</FIELD>
+      <FIELD TYPE="STRING">Velocidad</FIELD>
+      <FIELD TYPE="DOUBLE">FIELD_16</FIELD>
+      <FIELD TYPE="STRING">Conductor</FIELD>
+      <FIELD TYPE="DOUBLE">FIELD_18</FIELD>
+      <FIELD TYPE="LONGINT">NEAR_FID</FIELD>
+      <FIELD TYPE="DOUBLE">NEAR_DIST</FIELD>
+      <FIELD TYPE="DOUBLE">NEAR_X</FIELD>
+      <FIELD TYPE="DOUBLE">NEAR_Y</FIELD>
+      <FIELD TYPE="DOUBLE">xcoord</FIELD>
+      <FIELD TYPE="DOUBLE">ycoord</FIELD>
+    </FIELDS>
+  </DATABASE>
+  <SOURCE></SOURCE>
+  <HISTORY saga-version="7.3.0">
+    <TOOL library="shapes_points" id="19" name="Snap Points to Lines">
+      <OPTION type="double" id="DISTANCE" name="Search Distance">100.000000</OPTION>
+      <INPUT type="shapes" id="INPUT" name="Points">
+        <FILE>/home/lucciano/git_Proyecto/CapaPrueba/Capa_T434_34_X_Y.shp</FILE>
+      </INPUT>
+      <INPUT type="shapes" id="SNAP" name="Snap Features">
+        <FILE>/home/lucciano/git_Proyecto/Cargas_de_Capas/Redvial/RedVialComunasSantiago.shp</FILE>
+      </INPUT>
+      <OUTPUT type="shapes" id="MOVES" name="Moves">Capa_T434_34_X_Y [snap move: RedVialComunasSantiago]</OUTPUT>
+    </TOOL>
+  </HISTORY>
+  <FILE></FILE>
+  <DESCRIPTION></DESCRIPTION>
+  <PROJECTION>
+    <OGC_WKT>PROJCS["WGS_1984_UTM_Zone_19S",GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],PROJECTION["Transverse_Mercator"],PARAMETER["False_Easting",500000.0],PARAMETER["False_Northing",10000000.0],PARAMETER["Central_Meridian",-69.0],PARAMETER["Scale_Factor",0.9996],PARAMETER["Latitude_Of_Origin",0.0],UNIT["Meter",1.0]]</OGC_WKT>
+    <PROJ4>+proj=tmerc +a=6378137.000000 +b=6356752.314245 +x_0=500000.0 +y_0=10000000.0 +lon_0=-69.0 +k_0=0.9996 +lat_0=0.0 +no_defs</PROJ4>
+    <EPSG>-1</EPSG>
+  </PROJECTION>
+</SAGA_METADATA>
